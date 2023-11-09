@@ -7,6 +7,7 @@
 
 ### Создание плохого Dockerfile
 
+
 ![Плохой докерфайл](https://github.com/Alex-Nosov-ITMO/Clouds_ITMO/blob/main/devops_labs/lab2/scrins/плохой.jpg)
 
 
@@ -33,21 +34,56 @@
   Использование CMD вместо ENTRYPOINT, в правилах хорошего тона писать Dockerfile нужно так, чтобы его содержимое было цельным продуктом, не требующим изменений. CMD же эти изменения сделать позволяет.
 
 
-
+### Создание хорошего Dockerfile
 
 
 ![Хороший докерфайл](https://github.com/Alex-Nosov-ITMO/Clouds_ITMO/blob/main/devops_labs/lab2/scrins/хороший.jpg)
 
 
-![Запуск плохого](https://github.com/Alex-Nosov-ITMO/Clouds_ITMO/blob/main/devops_labs/lab2/scrins/запуск%20плохого.jpg)
+* `FROM python:3.10.12.` 
+  
+  Заменили родительский образ с Ubuntu на Python, что улучшило эффективность, так как ОС теперь не грузится.
+* `RUN apt-get update && pip install matplotlib numpy`
+   
+    RUN-команды записаны в одну строку, лишних слоёв нет
+* `COPY GCD.py ./`
+  
+  COPY вместо ADD для повышения универсальности
+* `ENTRYPOINT ["python3", "./GCD.py"]`
+  
+  `ENTRYPOIN` вместо `CMD` для защиты от редактирования
 
 
-![Запуск хорошего](https://github.com/Alex-Nosov-ITMO/Clouds_ITMO/blob/main/devops_labs/lab2/scrins/запуск%20хорошего.jpg)
-
-![Наши контейнеры](https://github.com/Alex-Nosov-ITMO/Clouds_ITMO/blob/main/devops_labs/lab2/scrins/контейнеры.jpg)
-
-![Наши образы](https://github.com/Alex-Nosov-ITMO/Clouds_ITMO/blob/main/devops_labs/lab2/scrins/образы.jpg)
-
-![Сборка образа](https://github.com/Alex-Nosov-ITMO/Clouds_ITMO/blob/main/devops_labs/lab2/scrins/сборка.jpg)
+### Сборка образов и запуск контейнеров.
 
 
+После написания Dockerfile мы запустили сборку образа при помощи команды `docker build -t badpractice`. После чего с помощью команды `docker run badpractice` запустили контейнер для плохого Dockerfile. Для хорошего повторили аналогичные действия.
+
+Как видно на скриншотах, контейнеры запустились корректно и отображаются в Docker Desktop.
+
+* Запуск плохого контейнера.
+  
+    ![Запуск плохого](https://github.com/Alex-Nosov-ITMO/Clouds_ITMO/blob/main/devops_labs/lab2/scrins/запуск%20плохого.jpg)
+
+
+* Запуск хорошего контейнера
+  
+  ![Запуск хорошего](https://github.com/Alex-Nosov-ITMO/Clouds_ITMO/blob/main/devops_labs/lab2/scrins/запуск%20хорошего.jpg)
+
+
+* Наши образы в Decker Desktop
+  
+  ![Наши образы](https://github.com/Alex-Nosov-ITMO/Clouds_ITMO/blob/main/devops_labs/lab2/scrins/образы.jpg)
+
+
+* Наши контейнеры в Docker Desktop
+  
+    ![Наши контейнеры](https://github.com/Alex-Nosov-ITMO/Clouds_ITMO/blob/main/devops_labs/lab2/scrins/контейнеры.jpg)
+
+
+
+### Bad practice по использованию контейнера.
+
+* Подгрузка операционной системы, когда содержимое контейнера от неё не зависит.
+* Использовать НЕ изолированно от внешнего окружения компьютера, так как это может повлечь за собой ошибки.
+* Не писать комментарии в Dockerfile, это ухудшает понимание файла в случае, если он обширный и включает в себя много команд.
