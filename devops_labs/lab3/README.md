@@ -12,7 +12,7 @@
 
 
 + В Actions создаем новый .yml файл (main.yml). Он делает следующее: при пуше в main запускается jobs, где мы авторизируемся в докер с помощью секретов, билдим и тегаем образ и в конце пушим в репозиторий докер хаб 
-(Скрин 1)
+  
 <img width="468" alt="image" src="https://github.com/Alex-Nosov-ITMO/Clouds_ITMO/blob/main/devops_labs/lab3/scrins/yml.jpg">
 
 
@@ -25,11 +25,14 @@
 + Пушим на гитхаб докерфайл и все необходимые для сборки файлы
 
 
-+ проверяем что все сработало:
++ Проверяем что все сработало:
     + Заходим в actions и видим что все шаги успешно исполнены.\
       <img width="468" alt="image" src="https://github.com/Alex-Nosov-ITMO/Clouds_ITMO/blob/main/devops_labs/lab3/scrins/build.jpg">
 
     + Заходим в репозиторий докерхаб и находим там наш образ.
-     <img width="468" alt="image" src="https://github.com/Alex-Nosov-ITMO/Clouds_ITMO/blob/main/devops_labs/lab3/scrins/образ.jpg"> 
+      <img width="468" alt="image" src="https://github.com/Alex-Nosov-ITMO/Clouds_ITMO/blob/main/devops_labs/lab3/scrins/образ.jpg"> 
 
 
+## Вывод:
+Заходит как-то раз улитка в гитхаб и спрашивает: "А как сделать push так, чтобы автоматически собрался docker-образ?"
+А бармен ей отвечает: "А уже все готово, глянь выше <3"
