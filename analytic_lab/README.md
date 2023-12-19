@@ -24,7 +24,9 @@
 
 ### **Начальные данные**:
 
-<img width="468" alt="image" src="https://github.com/Alex-Nosov-ITMO/Clouds_ITMO/blob/main/analytic_lab/scrins/begAWS.png">
+<img width="468" alt="image" src="https://github.com/Alex-Nosov-ITMO/Clouds_ITMO/blob/main/analytic_lab/scrins/begAWS1.jpg">
+
+<img width="468" alt="image" src="https://github.com/Alex-Nosov-ITMO/Clouds_ITMO/blob/main/analytic_lab/scrins/begAWS2.jpg">
 
 ### **Анализ сервисов AWS**:
 
@@ -96,6 +98,10 @@ AWS Backup - это сервис резервного копирования. в
 
 ### **Итоговая таблица**:
 
+<img width="468" alt="image" src="https://github.com/Alex-Nosov-ITMO/Clouds_ITMO/blob/main/analytic_lab/scrins/endAWS1.jpg">
+
+<img width="468" alt="image" src="https://github.com/Alex-Nosov-ITMO/Clouds_ITMO/blob/main/analytic_lab/scrins/endAWS2.jpg">
+
 
 
 ## **Вывод**
@@ -132,7 +138,7 @@ AWS Backup - это сервис резервного копирования. в
 
 ### **Начальные данные**:
 
-<img width="468" alt="image" src="https://github.com/Alex-Nosov-ITMO/Clouds_ITMO/blob/main/analytic_lab/scrins/begAzure.png">
+<img width="468" alt="image" src="https://github.com/Alex-Nosov-ITMO/Clouds_ITMO/blob/main/analytic_lab/scrins/begAzure.jpg">
 
 ### **Анализ сервисов Azure**:
 
@@ -187,7 +193,7 @@ Azure Virtual Machines - это сервис, который позволяет 
 
 
 
-# **Теоритические вопросы
+# **Теоритические вопросы**
 
 ## **Вопрос 1**:
 
@@ -200,7 +206,7 @@ Azure Virtual Machines - это сервис, который позволяет 
 
 
 
-## **Вопрос 2***:
+## **Вопрос 2**:
 
 
 Для чего введен термин Infrastructure as a Code? Какие выгоды это несет с точки зрения автоматизации, безопасности? Предложите набор компонентов, которые нужно использовать при развертывании инфраструктуры как кода.
