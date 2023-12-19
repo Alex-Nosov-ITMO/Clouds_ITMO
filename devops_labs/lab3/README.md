@@ -26,7 +26,7 @@
 
 
 + проверяем что все сработало:
-    + Заходим в actions и видим что все шаги успешно исполнены. 
+    + Заходим в actions и видим что все шаги успешно исполнены.\
       <img width="468" alt="image" src="https://github.com/Alex-Nosov-ITMO/Clouds_ITMO/blob/main/devops_labs/lab3/scrins/build.jpg">
 
     + Заходим в репозиторий докерхаб и находим там наш образ.
